@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/get_answer.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "pages/**/*.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    { "src": "/api/get_answer", "dest": "api/get_answer.py" }
+  ]
+}
